@@ -1,0 +1,9 @@
+---
+
+odoo_version: 10.0
+odoo_config_admin_passwd: "{{ vault_odoo_config_agmin_passwd }}"
+odoo_config_db_host: "localhost"
+odoo_config_db_user: "odoo"
+odoo_config_db_passwd: "{{ vault_odoo_config_db_passwd }}"
+odoo_repo_type: git
+odoo_repo_dest: "/home/{{ odoo_user }}/odoo"
