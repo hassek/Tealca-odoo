@@ -3,6 +3,7 @@
 odoo_version: 10.0
 odoo_config_admin_passwd: "{{ vault_odoo_config_admin_passwd }}"
 odoo_config_db_host: "localhost"
+odoo_config_db_host_user: "root"
 odoo_config_db_user: "odoo"
 odoo_config_db_name: "odoo_tealca"
 odoo_config_db_port: "5432"
@@ -11,7 +12,7 @@ odoo_config_smtp_password: "{{ vault_odoo_config_smtp_password }}"
 odoo_config_smtp_port: 587
 odoo_config_smtp_server: "smtp.gmail.com"
 odoo_config_smtp_ssl: True
-odoo_config_smtp_user: 'tchenriquez@gmail.com'
+odoo_config_smtp_user: 'ytatealca@gmail.com'
 odoo_repo_type: git
 odoo_repo_dest: "/home/{{ odoo_user }}/odoo"
 odoo_config_syslog: True
@@ -26,6 +27,6 @@ postgresql_users:
 
 postgresql_user_privileges:
   - name: "{{ odoo_config_db_user }}"
-    db: odoo                    # database
+    db: odoo_tealca             # database
     priv: "ALL"                 # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
     role_attr_flags: "CREATEDB" # role attribute flags

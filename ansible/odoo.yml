@@ -5,4 +5,4 @@
   roles:
     - mbase
     - ANXS.postgresql
-    - sebalix.odoo
+    - {role: odoo, tags: odoo}

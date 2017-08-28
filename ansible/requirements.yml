@@ -3,5 +3,7 @@
 - src: https://github.com/hassek/mbase.git
   version: master
   name: mbase
-- src: sebalix.odoo
+- src: https://github.com/osiell/ansible-odoo.git
+  version: master
+  name: odoo
 - src: ANXS.postgresql
