@@ -1,4 +1,4 @@
 ---
 
 - src: sebalix.odoo
-- src: galaxyproject.postgresql
+- src: ANXS.postgresql
