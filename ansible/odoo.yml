@@ -3,5 +3,6 @@
 - hosts: all
   become: yes
   roles:
+    - mbase
     - ANXS.postgresql
     - sebalix.odoo
