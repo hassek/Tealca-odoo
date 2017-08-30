@@ -1,0 +1,21 @@
+---
+
+odoo_version: 10.0
+odoo_config_admin_passwd: "{{ vault_odoo_config_admin_passwd }}"
+odoo_config_db_host: "10.142.0.3"
+odoo_postgresql_active_unaccent: no
+odoo_postgresql_set_user: no
+odoo_config_db_host_user: "odoo"
+odoo_config_db_name: "odoo"
+odoo_config_db_port: "5432"
+odoo_config_smtp_password: "{{ vault_odoo_config_smtp_password }}"
+odoo_config_smtp_port: 587
+odoo_config_smtp_server: "smtp.gmail.com"
+odoo_config_smtp_ssl: True
+odoo_config_smtp_user: 'ytatealca@gmail.com'
+odoo_config_xmlrpc_port: 80
+odoo_repo_type: git
+odoo_repo_dest: "/home/{{ odoo_user }}/odoo"
+odoo_config_syslog: True
+odoo_config_addons_path:
+  - "/home/{{ odoo_user }}/odoo/addons"

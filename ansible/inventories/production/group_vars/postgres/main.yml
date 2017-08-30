@@ -1,0 +1,23 @@
+---
+
+postgresql_version: 9.6
+postgresql_users:
+  - name: "{{ odoo_config_db_user }}"
+    pass: "{{ vault_odoo_config_db_passwd }}"
+    encrypted: no
+
+postgresql_listen_addresses: "*"
+postgresql_pg_hba_default:
+  - { type: local, database: all, user: '{{ postgresql_admin_user }}', address: '', method: '{{ postgresql_default_auth_method }}', comment: '' }
+  - { type: local, database: all, user: all, address: '',             method: '{{ postgresql_default_auth_method }}', comment: '"local" is for Unix domain socket connections only' }
+  - { type: host,  database: all, user: all, address: '0.0.0.0/0', method: '{{ postgresql_default_auth_method }}', comment: 'IPv4 local connections:' }
+  - { type: host,  database: all, user: all, address: '::1/128',      method: '{{ postgresql_default_auth_method }}', comment: 'IPv6 local connections:' }
+
+postgresql_databases:
+  - name: odoo
+
+postgresql_user_privileges:
+  - name: "{{ odoo_config_db_user }}"
+    db: odoo                    # database
+    priv: "ALL"                 # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
+    role_attr_flags: "CREATEDB"

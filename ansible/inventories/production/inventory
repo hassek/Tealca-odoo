@@ -1,2 +1,5 @@
 [odoo]
-odoo.yta.com
+odoo1.ytaerp.tk
+
+[postgres]
+db1.ytaerp.tk
